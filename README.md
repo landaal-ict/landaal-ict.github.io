@@ -1,1 +1,0 @@
-# landaal-ict-github.io
