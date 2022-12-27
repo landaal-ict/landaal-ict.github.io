@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://landaalict.nl/overmij/</loc>
+    <loc>http://landaalict.nl/overmij/</loc>
     <lastmod>2022-12-27T14:56:33+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/</loc>
+    <loc>http://landaalict.nl/</loc>
     <lastmod>2022-12-27T13:03:54+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/posts/nieuwe-site/</loc>
+    <loc>http://landaalict.nl/posts/nieuwe-site/</loc>
     <lastmod>2022-12-27T13:03:54+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/posts/</loc>
+    <loc>http://landaalict.nl/posts/</loc>
     <lastmod>2022-12-27T13:03:54+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/categories/</loc>
+    <loc>http://landaalict.nl/categories/</loc>
   </url><url>
-    <loc>https://landaalict.nl/tags/</loc>
+    <loc>http://landaalict.nl/tags/</loc>
   </url>
 </urlset>
