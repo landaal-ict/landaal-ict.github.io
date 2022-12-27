@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Landaal-ict</title>
+    <link>https://landaalict.nl/</link>
+    <description>Recent content on Landaal-ict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Dec 2022 13:03:54 +0100</lastBuildDate><atom:link href="https://landaalict.nl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Over mij</title>
+      <link>https://landaalict.nl/overmij/</link>
+      <pubDate>Tue, 27 Dec 2022 14:56:33 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/overmij/</guid>
+      
+        <description>Mijn naam is Wesley Landaal.
+Ik ben 33 jaar oud.
+Heb een grote liefde voor IT.
+Hou me zelf altijd bezig met diverse projecten.
+Op dit moment begonnen met Eigenrouter.nl of zie de github
+Verder doe ik veel met Linux en Windows.
+Windows omdat daar veel software gewoon op werkt.
+Linux draai ik op al mijn servers.</description>
+      
+    </item>
+    
+    <item>
+      <title>Nieuwe Site</title>
+      <link>https://landaalict.nl/posts/nieuwe-site/</link>
+      <pubDate>Tue, 27 Dec 2022 13:03:54 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/posts/nieuwe-site/</guid>
+      
+        <description>Welkom op mijn nieuwe site!
+Op deze website wil ik dingen met jullie gaan delen die mij bezig houden.
+Zal vooral op It gebied zijn.
+Ik vind het fijn om met Linux te werken.
+Dat wil niet zeggen dat ik niks met Windows doe.
+Ik gebruik het os wat het beste is voor de betreffende taak.
+Bekijk ook eens mijn Github pagina</description>
+      
+    </item>
+    
+  </channel>
+</rss>
