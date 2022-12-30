@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://landaalict.nl/posts/cloudflaretunnel/</loc>
+    <lastmod>2022-12-30T09:41:19+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/</loc>
+    <lastmod>2022-12-30T09:41:19+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/posts/</loc>
+    <lastmod>2022-12-30T09:41:19+01:00</lastmod>
+  </url><url>
     <loc>https://landaalict.nl/overmij/</loc>
     <lastmod>2022-12-27T14:56:33+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/</loc>
-    <lastmod>2022-12-27T13:03:54+01:00</lastmod>
-  </url><url>
     <loc>https://landaalict.nl/posts/nieuwe-site/</loc>
-    <lastmod>2022-12-27T13:03:54+01:00</lastmod>
-  </url><url>
-    <loc>https://landaalict.nl/posts/</loc>
     <lastmod>2022-12-27T13:03:54+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/</loc>

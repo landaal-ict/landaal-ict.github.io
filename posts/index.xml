@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Landaal-ict</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2022 13:03:54 +0100</lastBuildDate><atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 09:41:19 +0100</lastBuildDate><atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudflare tunnel</title>
+      <link>https://landaalict.nl/posts/cloudflaretunnel/</link>
+      <pubDate>Fri, 30 Dec 2022 09:41:19 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/posts/cloudflaretunnel/</guid>
+      
+        <description>Cloudflare Tunnel Protect your web servers from direct attack From the moment an application is deployed, developers and IT spend time locking it down — configuring ACLs, rotating IP addresses, and using clunky solutions like GRE tunnels.
+There’s a simpler and more secure way to protect your applications and web servers from direct attacks: Cloudflare Tunnel.
+Ensure your server is safe, no matter where it’s running: public cloud, private cloud, Kubernetes cluster, or even a Mac mini under your TV.</description>
+      
+    </item>
+    
     <item>
       <title>Nieuwe Site</title>
       <link>https://landaalict.nl/posts/nieuwe-site/</link>
