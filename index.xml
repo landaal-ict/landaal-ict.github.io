@@ -6,7 +6,22 @@
     <description>Recent content on Landaal-ict</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2022 13:45:19 +0100</lastBuildDate><atom:link href="https://landaalict.nl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jan 2023 14:48:25 +0100</lastBuildDate><atom:link href="https://landaalict.nl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>https://landaalict.nl/info/cv/</link>
+      <pubDate>Sat, 14 Jan 2023 14:48:25 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/info/cv/</guid>
+      
+        <description>Opleidingen 2022 Fiber To The Home Certificering Hass monteur glasvezel aansluitingen.
+2020 Dell Certificeringen Certificering voor reparaties aan Dell devices, zoals laptops,desktops,servers
+2019 HVD / KVD + pop &amp;amp; TTG Certificeringen voor het kunnen en mogen werken aan KPN netwerken en rand apparatuur
+2018 3C-HAS Certificering voor het kunnen en mogen werken aan coax media netwerken van o.a Ziggo
+Werkervaring 2022 - heden Touringcarchauffeur binnen / buitenland. Werkzaamheden zoals vakantie reizen en dagtochten.</description>
+      
+    </item>
+    
     <item>
       <title>Nice Powershell</title>
       <link>https://landaalict.nl/posts/nice-powershell/</link>
@@ -16,8 +31,7 @@
       
         <description>Installeer mooie windows terminal. irm &amp;#34;https://github.com/ChrisTitusTech/powershell-profile/raw/main/setup.ps1&amp;#34; | iex install fonts cove Cove Fonts
 Selecteer de fonts in de settings van windows terminal.
-uitzetten ExecutionPolicy Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-eind resultaat ! ![][ps1.png]]</description>
+uitzetten ExecutionPolicy Set-ExecutionPolicy -ExecutionPolicy Unrestricted</description>
       
     </item>
     
