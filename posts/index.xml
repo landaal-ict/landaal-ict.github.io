@@ -16,6 +16,7 @@
       
         <description>Installeer mooie windows terminal. irm &amp;#34;https://github.com/ChrisTitusTech/powershell-profile/raw/main/setup.ps1&amp;#34; | iex install fonts cove Cove Fonts
 Selecteer de fonts in de settings van windows terminal.
+Installeer Terminal-icons Install-Module -Name Terminal-Icons -Repository PSGallery
 uitzetten ExecutionPolicy Set-ExecutionPolicy -ExecutionPolicy Unrestricted</description>
       
     </item>
