@@ -199,7 +199,7 @@ Ensure your server is safe, no matter where it’s running: public cloud, privat
 
     ,
         "url" : "https:\/\/landaalict.nl\/posts\/cloudflaretunnel\/",
-        "wordCount" : "288",
+        "wordCount" : "300",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -410,6 +410,8 @@ make a note of the location ;)</p>
 <p>Lets make the tunnel
 by name fill the name that you want for the tunnel.</p>
 <pre tabindex="0"><code>cloudflared tunnel create &lt;NAME&gt;
+
+Take a note of the output, we need the .json file later.
 </code></pre><p>Now we will create a configuration file in the <code>.cloudflared</code> directory (the same one that our <strong>cert.pem</strong> file was written to)</p>
 <pre tabindex="0"><code>nano /home/$USER/.cloudflared/config.yaml
 </code></pre><p>there is an emty file.
