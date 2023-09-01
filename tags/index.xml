@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Wesley Landaal</title>
+    <link>https://landaalict.nl/tags/</link>
+    <description>Recent content in Tags on Wesley Landaal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-nl</language>
+    <copyright>Wesley Landaal 2023</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 21:27:29 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>site</title>
+      <link>https://landaalict.nl/tags/site/</link>
+      <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/tags/site/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
