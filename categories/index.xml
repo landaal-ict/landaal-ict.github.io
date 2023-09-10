@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Fri, 01 Sep 2023 21:27:29 +0200</lastBuildDate><atom:link href="https://landaalict.nl/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 13:15:13 +0200</lastBuildDate><atom:link href="https://landaalict.nl/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>computers</title>
-      <link>https://landaalict.nl/categories/computers/</link>
-      <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      <title>games</title>
+      <link>https://landaalict.nl/categories/games/</link>
+      <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
       
-      <guid>https://landaalict.nl/categories/computers/</guid>
+      <guid>https://landaalict.nl/categories/games/</guid>
       <description></description>
     </item>
     
     <item>
       <title>it</title>
       <link>https://landaalict.nl/categories/it/</link>
-      <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
       
       <guid>https://landaalict.nl/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computers</title>
+      <link>https://landaalict.nl/categories/computers/</link>
+      <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/categories/computers/</guid>
       <description></description>
     </item>
     
