@@ -7,7 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 17 Sep 2023 11:38:07 +0200</lastBuildDate><atom:link href="https://landaalict.nl/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 21:10:42 +0200</lastBuildDate><atom:link href="https://landaalict.nl/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL Windows Server</title>
+      <link>https://landaalict.nl/posts/wsl-windows-server/</link>
+      <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/posts/wsl-windows-server/</guid>
+      <description>Installeer WSL op windows Server 20221wsl --install Voor als hij wsl 1 installeerd.
+1dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart Maakt wsl2 standaard.
+1wsl --set-default-version 2 bekijk of je geinstalleerde linux distro(s) wsl 1 of 2 zijn.
+1wsl --list --verbose Als je nog wsl1 versies heb kun je ze omzetten naar wsl2.
+verander de naam debian hier onder naar jou disto.
+1wsl --set-version debian 2 Als je maar een linux distro hebt geinstalleerd kun je die starten</description>
+    </item>
+    
     <item>
       <title>Wireguard</title>
       <link>https://landaalict.nl/posts/wireguard/</link>

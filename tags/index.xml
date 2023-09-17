@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 17 Sep 2023 11:38:07 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 21:10:42 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>server</title>
+      <link>https://landaalict.nl/tags/server/</link>
+      <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://landaalict.nl/tags/windows/</link>
+      <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/tags/windows/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>wireguard</title>
       <link>https://landaalict.nl/tags/wireguard/</link>

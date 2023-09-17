@@ -3,22 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://landaalict.nl/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/computers/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/it/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/posts/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/tags/server/</loc>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/tags/</loc>
-    <lastmod>2023-09-17T11:38:07+02:00</lastmod>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/tags/windows/</loc>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/categories/wsl/</loc>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/posts/wsl-windows-server/</loc>
+    <lastmod>2023-09-17T21:10:42+02:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/tags/wireguard/</loc>
     <lastmod>2023-09-17T11:38:07+02:00</lastmod>

@@ -8,21 +8,21 @@
 
   
     
-  <title>Wireguard | Wesley Landaal</title>
+  <title>WSL Windows Server | Wesley Landaal</title>
   <meta name="author" content="Wesley Landaal">
-  <meta name="description" content="Wireguard installer">
+  <meta name="description" content="Installeer wsl op windows server">
   <meta name="keywords" content="blog,personal,bus,driver,instructor,instructeur,motor,auto">
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Wireguard"/>
-<meta name="twitter:description" content="Wireguard installer"/>
+<meta name="twitter:title" content="WSL Windows Server"/>
+<meta name="twitter:description" content="Installeer wsl op windows server"/>
 
-  <meta property="og:title" content="Wireguard" />
-<meta property="og:description" content="Wireguard installer" />
+  <meta property="og:title" content="WSL Windows Server" />
+<meta property="og:description" content="Installeer wsl op windows server" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://landaalict.nl/posts/wireguard/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-09-17T11:38:07+02:00" />
-<meta property="article:modified_time" content="2023-09-17T11:38:07+02:00" />
+<meta property="og:url" content="https://landaalict.nl/posts/wsl-windows-server/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-17T21:10:42+02:00" />
+<meta property="article:modified_time" content="2023-09-17T21:10:42+02:00" />
 
   <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
   
@@ -168,10 +168,12 @@
         <div class="post-heading">
           <div class="tags">
             
-            <a class="tag" href="/tags/wireguard/" title="wireguard">wireguard</a>
+            <a class="tag" href="/tags/windows/" title="windows">windows</a>
+            
+            <a class="tag" href="/tags/server/" title="server">server</a>
             
           </div>
-          <h1>Wireguard</h1>
+          <h1>WSL Windows Server</h1>
           <h2 class="subheading"></h2>
           <span class="meta">
             Posted by  Wesley Landaal 
@@ -196,35 +198,32 @@
               col-lg-8 col-lg-offset-2
               col-md-10 col-md-offset-1
               post-container">
-        <p>er bestaad een wireguard project on github.<br>
-Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.<br>
-openSUSE is een linux distro.<br>
-maar vervolgens blijven de pr&rsquo;s open staan niet alleen die van mij maar er staan er meerdere open.<br>
-Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.<br>
-Aangezien het vrije software is heb ik mijn versie op github gezet.<br>
-Deze heeft dus openSUSE support.</p>
-<p>Ik ben wel van plan dit project levend te houden en eventuele verbeteringen toe te voegen aan de repo.<br>
-Dus dan zie ik de pr wel komen.<br>
-Zie <a href="https://github.com/landaal-ict/wireguard" target="_blank">github</a> project hoe je kunt bijdragen.</p>
-
+        <h3 id="installeer-wsl-op-windows-server-2022">Installeer WSL op windows Server 2022<a class="anchorjs-link" href="#installeer-wsl-op-windows-server-2022"></a></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl --install
+</span></span></code></pre></div><p>Voor als hij wsl 1 installeerd.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</span></span></code></pre></div><p>Maakt wsl2 standaard.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl --set-default-version 2
+</span></span></code></pre></div><p>bekijk of je geinstalleerde linux distro(s) wsl 1 of 2 zijn.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl --list --verbose
+</span></span></code></pre></div><p>Als je nog wsl1 versies heb kun je ze omzetten naar wsl2.<br>
+verander de naam debian hier onder naar jou disto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl --set-version debian 2
+</span></span></code></pre></div><p>Als je maar een linux distro hebt geinstalleerd kun je die starten</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl
+</span></span></code></pre></div><p>Heb je meerdere versies geinstalleerd ?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wsl -d jedistroname
+</span></span></code></pre></div><h3 id="klaar-veel-plezier">Klaar! Veel plezier<a class="anchorjs-link" href="#klaar-veel-plezier"></a></h3>
 
         <hr style="visibility: hidden;" />
         <ul class="pager">
           
           <li class="previous">
-            <a href="/posts/autocatcher/" data-toggle="tooltip" data-placement="top" title="AutoCatcher">
+            <a href="/posts/wireguard/" data-toggle="tooltip" data-placement="top" title="Wireguard">
               Previous<br>
-              <span>AutoCatcher</span>
+              <span>Wireguard</span>
             </a>
           </li>
           
-          
-          <li class="next">
-            <a href="/posts/wsl-windows-server/" data-toggle="tooltip" data-placement="top" title="WSL Windows Server">
-              Next<br>
-              <span>WSL Windows Server</span>
-            </a>
-          </li>
           
         </ul>
         <hr style="visibility: hidden;" />
