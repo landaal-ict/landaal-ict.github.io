@@ -7,7 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 15 Oct 2023 12:12:37 +0200</lastBuildDate><atom:link href="https://landaalict.nl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 12:36:00 +0200</lastBuildDate><atom:link href="https://landaalict.nl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wake on Lan</title>
+      <link>https://landaalict.nl/posts/wol/</link>
+      <pubDate>Sun, 15 Oct 2023 12:36:00 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/posts/wol/</guid>
+      <description>Setup wake on lan Linuxik ga er vanuit dat je wake on lan in de bios al hebt aan staan.
+enp4s0 is mijn interface dit kan op jou machine anders zijn.
+Dus in alle commandos enp4s0 aanpassen naar de naam van jou interface.
+Check in linux of je server Wake on lan al heeft aan staan.
+Beijk de naam van je interface.
+1ip a De eerste is je loopback interface en de tweede moet je hebben.</description>
+    </item>
+    
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/posts/docker/</link>
