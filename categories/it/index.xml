@@ -18,6 +18,7 @@
 Dus ik heb een pxe boot server opgezet.
 Hier onder een uitleg hoe ik dat gedaan heb.
 Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
+Mijn docker compose file kun je hier vinden
 Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
     </item>
     <item>
