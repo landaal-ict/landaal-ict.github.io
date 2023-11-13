@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Fri, 01 Sep 2023 21:27:29 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 21:27:29 +0200</lastBuildDate>
+    <atom:link href="https://landaalict.nl/tags/site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nieuwe site</title>
       <link>https://landaalict.nl/posts/nieuwesite/</link>
       <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/nieuwesite/</guid>
       <description>Heb mijn website weer eens op de schop gedaan.
 Dit heb ik gedaan omdat ik mijn vorige website niet leuk meer vond.
@@ -21,6 +21,5 @@ Zal zo nu en dan dingen op mijn website plaatsen.
 disclaimer: rare comments worden zonder pardon verwijderd.
 Fijne dag! :)</description>
     </item>
-    
   </channel>
 </rss>

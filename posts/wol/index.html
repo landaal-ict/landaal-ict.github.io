@@ -16,6 +16,7 @@
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wake on Lan"/>
 <meta name="twitter:description" content="Setup wake on lan"/>
+<meta name="twitter:site" content="@_landaal"/>
 
   <meta property="og:title" content="Wake on Lan" />
 <meta property="og:description" content="Setup wake on lan" />
@@ -23,6 +24,7 @@
 <meta property="og:url" content="https://landaalict.nl/posts/wol/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-10-15T12:36:00+02:00" />
 <meta property="article:modified_time" content="2023-10-15T12:36:00+02:00" />
+
 
   <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
   
@@ -212,12 +214,12 @@ Beijk de naam van je interface.</p>
 </figure><br>
 De eerste is je loopback interface en de tweede moet je hebben.<br>
 Ik heb mijn mac en ip even zwart gemaakt ;)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ethtool enp4s0 | grep Wake-on
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ethtool enp4s0 <span style="color:#ff79c6">|</span> grep Wake<span style="color:#ff79c6">-</span>on
 </span></span></code></pre></div><p>Ik krijg dan de volgende output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wesley@tank:~$ sudo ethtool enp4s0 | grep Wake-on
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>        Supports Wake-on: g
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        Wake-on: g
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>wesley@tank:~$
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wesley@tank:<span style="color:#ff79c6">~$</span> sudo ethtool enp4s0 <span style="color:#ff79c6">|</span> grep Wake<span style="color:#ff79c6">-</span>on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>        Supports Wake<span style="color:#ff79c6">-</span>on: g
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        Wake<span style="color:#ff79c6">-</span>on: g
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>wesley@tank:<span style="color:#ff79c6">~$</span>
 </span></span></code></pre></div><p>Krijg jij geen output op je interface?<br>
 Dan ondersteund jou kaart geen WOL, of je hebt het nog uitstaan in je bios.</p>
 <p>g betekend dat het aanstaat.<br>
@@ -232,27 +234,27 @@ g (magic packet activity)<br>
 (g is belangrijk om WoL te laten werken.)</p>
 <p>Heb je een andere uitkomst dan g?<br>
 Dan kun je dat veranderen door het volgende commando.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ethtool -s enp4s0 wol g
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ethtool <span style="color:#ff79c6">-</span>s enp4s0 wol g
 </span></span></code></pre></div><p>Nu moeten we er nog voor zorgen dat na elke reboot wake on lan nog actief blijft.<br>
 Dit kan door verschillende manieren.<br>
 Ik vertel er twee via cron en systemd.</p>
 <p>Via cron:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo crontab -e
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>@reboot /usr/bin/ethtool -s enp4s0 wol g
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>@reboot <span style="color:#ff79c6">/</span>usr<span style="color:#ff79c6">/</span>bin<span style="color:#ff79c6">/</span>ethtool <span style="color:#ff79c6">-</span>s enp4s0 wol g
 </span></span></code></pre></div><p>Via systemd:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo nano /etc/systemd/system/wol@.service
 </span></span></code></pre></div><p>Zet de volgende config in de file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[Unit]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Description=Wake-on-LAN for %i
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>Requires=network.target
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>After=network.target
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[Unit]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Description<span style="color:#ff79c6">=</span>Wake<span style="color:#ff79c6">-</span>on<span style="color:#ff79c6">-</span>LAN <span style="color:#ff79c6">for</span> <span style="color:#ff79c6">%</span>i
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>Requires<span style="color:#ff79c6">=</span>network<span style="color:#ff79c6">.</span>target
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>After<span style="color:#ff79c6">=</span>network<span style="color:#ff79c6">.</span>target
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>[Service]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>ExecStart=/usr/bin/ethtool -s %i wol g
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>Type=oneshot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>ExecStart<span style="color:#ff79c6">=/</span>usr<span style="color:#ff79c6">/</span>bin<span style="color:#ff79c6">/</span>ethtool <span style="color:#ff79c6">-</span>s <span style="color:#ff79c6">%</span>i wol g
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>Type<span style="color:#ff79c6">=</span>oneshot
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>[Install]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>WantedBy=multi-user.target
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>WantedBy<span style="color:#ff79c6">=</span>multi<span style="color:#ff79c6">-</span>user<span style="color:#ff79c6">.</span>target
 </span></span></code></pre></div><p>Nu moeten we het alleen nog even aanzetten:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl enable --now wol@enp4s0.service
 </span></span></code></pre></div><p>Als je nu je systeem herstart dan zal de netwerk kaart gewoon weer wake on lan aan moeten hebben staan.</p>
@@ -292,6 +294,13 @@ Laat ze achter ;)</p>
             </a>
           </li>
           
+          
+          <li class="next">
+            <a href="/posts/pxe/" data-toggle="tooltip" data-placement="top" title="Pxe server">
+              Next<br>
+              <span>Pxe server</span>
+            </a>
+          </li>
           
         </ul>
         <hr style="visibility: hidden;" />
@@ -361,6 +370,10 @@ Laat ze achter ;)</p>
     <a href="/tags/game/">Game</a>
     
     <a href="/tags/it/">IT</a>
+    
+    <a href="/tags/pxe/">pxe</a>
+    
+    <a href="/tags/pxeserver/">pxeserver</a>
     
     <a href="/tags/server/">server</a>
     

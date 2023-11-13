@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Pxe server | Wesley Landaal</title>
+  <meta name="author" content="Wesley Landaal">
+  <meta name="description" content="netbootxyz">
+  <meta name="keywords" content="blog,personal,bus,driver,instructor,instructeur,motor,auto">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pxe server"/>
+<meta name="twitter:description" content="netbootxyz"/>
+<meta name="twitter:site" content="@_landaal"/>
+
+  <meta property="og:title" content="Pxe server" />
+<meta property="og:description" content="netbootxyz" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://landaalict.nl/posts/pxe/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-12T21:35:17+01:00" />
+<meta property="article:modified_time" content="2023-11-12T21:35:17+01:00" />
+
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  <script src=/js/lazysizes.min.js></script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  
+  
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://landaalict.nl/">Wesley Landaal</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archief">Archief</a></li>
+          
+          <li><a href="/about/" title="Over mij">Over mij</a></li>
+          
+          <li><a href="https://github.com/landaal-ict/" title="Github">Github</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/img/home-bg.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/pxe/" title="pxe">pxe</a>
+            
+            <a class="tag" href="/tags/pxeserver/" title="pxeserver">pxeserver</a>
+            
+          </div>
+          <h1>Pxe server</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  Wesley Landaal 
+            on Sun, Nov 12, 2023
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <h2 id="pxe-boot-server">PXE Boot Server<a class="anchorjs-link" href="#pxe-boot-server"></a></h2><p>Was er klaar mee met elke keer een usb stick maken voor een installatie.<br>
+Dus ik heb een pxe boot server opgezet.<br>
+Hier onder een uitleg hoe ik dat gedaan heb.<br>
+Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.</p>
+<h3 id="vereisten">Vereisten<a class="anchorjs-link" href="#vereisten"></a></h3><ul>
+<li>Linux server</li>
+<li>Docker &amp; Docker compose</li>
+<li>Je server moet een static ip hebben</li>
+<li>dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk)</li>
+</ul>
+<h3 id="installeren">Installeren<a class="anchorjs-link" href="#installeren"></a></h3><p>Maak een map aan op je server voor de installatie.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir netboot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>cd netboot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>mkdir assets
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>mkdir config
+</span></span></code></pre></div><p>Maak een compose file in de map netboot.<br>
+nano docker-compose.yml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>version: &#34;2.1&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>services:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  netbootxyz:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    image: lscr.io/linuxserver/netbootxyz:latest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    container_name: netboot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    environment:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>      - TZ=Europe/Amsterdam
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      # - MENU_VERSION=1.9.9 #optional, sets menus version, unset uses latest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>      - PORT_RANGE=30000:30010 #optional
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>      - SUBFOLDER=/ #optional
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    volumes:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>      - ./config:/config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>      - ./assets:/assets #optional
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    ports:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>      - 3000:3000
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      - 69:69/udp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>      - 8080:80 #optional
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    restart: unless-stopped
+</span></span></code></pre></div><p>Start je docker container.<br>
+na het starten zie je gelijk de logs.<br>
+Zijn er geen errors? druk dan ctrl+c om de logs te sluiten.<br>
+Zijn poort 3000 of poort 8080 al in gebruik?<br>
+Pas dan de linker getallen aan hier boven.<br>
+Denk er dan wel om dat je ook in de uileg hier onder de juiste poorten voor jou gebruikt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>docker compose up -d &amp;&amp; docker logs -f netboot
+</span></span></code></pre></div><h3 id="configuratie">Configuratie<a class="anchorjs-link" href="#configuratie"></a></h3><p>Je kun je boot images op de vulgende url vinden http://ip-van-je-server:3000/</p>
+<h3 id="lokale-bibliotheek">Lokale bibliotheek<a class="anchorjs-link" href="#lokale-bibliotheek"></a></h3><p>Als je wilt aanbieden vanaf je lokale bibliotheek dan moet je het volgende aanpassen, pas the  boot.cfg file aan in boot menus.</p>
+<p>verander:</p>
+<p>set live_endpoint <a href="https://github.com/netbootxyz" target="_blank">https://github.com/netbootxyz</a></p>
+<p>naar:</p>
+<p>set live_endpoint http://ip-van-je-server:8080</p>
+<p>Houd er rekening mee dat je nu alleen kan booten van images die je gedownload hebt.</p>
+<h3 id="dhcp-configuratie">DHCP Configuratie<a class="anchorjs-link" href="#dhcp-configuratie"></a></h3><p>Hier onder een aantal configuraties voor bekende routers.<br>
+Heb je aanvullingen? laat een comment achter.</p>
+<h4 id="pfsense">Pfsense<a class="anchorjs-link" href="#pfsense"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Services -&gt; DHCP Server
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Set both the option for &#34;TFTP Server&#34; and the options under the Advanced &#34;Network Booting&#34; section.n * check enable * Next server- IP used for TFTP Server * Default BIOS file name- netboot.xyz.kpxe * UEFI 32 bit file name- netboot.xyz.efi * UEFI 64 bit file name- netboot.xyz.efi
+</span></span></code></pre></div><h4 id="opnsense">Opnsense<a class="anchorjs-link" href="#opnsense"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>OPNsense¶
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Services -&gt; DHCP Server
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Under the Advanced &#34;Network Booting&#34; section. * check enable * Next server- IP of docker host * Default BIOS file name- netboot.xyz.kpxe * UEFI 32 bit file name- netboot.xyz.efi * UEFI 64 bit file name- netboot.xyz.efi
+</span></span></code></pre></div><h4 id="unifi-security-gateway-with-the-controller">Unifi Security Gateway (with the controller)<a class="anchorjs-link" href="#unifi-security-gateway-with-the-controller"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Networks <span style="color:#ff79c6">-&gt;</span> LAN (<span style="color:#ff79c6">or</span> the network you want to boot from) <span style="color:#ff79c6">-&gt;</span> ADVANCED DHCP OPTIONS <span style="color:#ff79c6">*</span> tick Enable network boot <span style="color:#ff79c6">*</span> Server<span style="color:#ff79c6">-</span> YOURSERVERIP <span style="color:#ff79c6">*</span> Filename<span style="color:#ff79c6">-</span> netboot<span style="color:#ff79c6">.</span>xyz<span style="color:#ff79c6">.</span>kpxe Advanced full support <span style="color:#ff79c6">*</span> For USG variants force provisioning a json containing the same config used <span style="color:#ff79c6">for</span> EdgeOS (shown below) will fully support netboot<span style="color:#ff79c6">.</span> <span style="color:#ff79c6">*</span> For UDM variants, creating a valid dnsmasq config <span style="color:#ff79c6">and</span> placing <span style="color:#ff79c6">in</span> <span style="color:#ff79c6">/</span>run<span style="color:#ff79c6">/</span>dnsmasq<span style="color:#ff79c6">.</span>conf<span style="color:#ff79c6">.</span>d will <span style="color:#8be9fd;font-style:italic">load</span> the config, but will <span style="color:#ff79c6">not</span> survive reboots <span style="color:#ff79c6">or</span> firmware updates
+</span></span></code></pre></div><h3 id="hoe-windows-booten-vanaf-netwerk">Hoe Windows booten vanaf netwerk?<a class="anchorjs-link" href="#hoe-windows-booten-vanaf-netwerk"></a></h3><p>Dit is een stukje ingewikkelder dan Linux.<br>
+Maar ik ga het hier onder uit leggen.</p>
+<h3 id="vereisten-1">Vereisten<a class="anchorjs-link" href="#vereisten-1"></a></h3><ul>
+<li>Windows 10/11 machine</li>
+<li>Windows ISO</li>
+<li>Windows ADK for Windows 10/11</li>
+<li>Windows PE add-on for the Windows ADK</li>
+<li>Netwerk share voor de windows files (zonder wachtwoord werkt het makkelijkst)</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install#download-the-adk-for-windows-11-version-22h2-updated-september-2023" target="_blank">Windows 11 ADK bestanden hier</a></p>
+<p>Installeer Windows ADK for Windows 10/11.</p>
+<p>Installeer Windows PE add-on for the Windows ADK.</p>
+<h3 id="winpe-maken">Winpe maken<a class="anchorjs-link" href="#winpe-maken"></a></h3><p>Start Deployment and Imaging Tools Environment als administrator via start menu.</p>
+<p>Ga naar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cd &#34;..\Windows Preinstallation Environment\amd64&#34;
+</span></span></code></pre></div><p>Koppel de Windows PE boot image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>md C:\WinPE_amd64\mount
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Dism /Mount-Image /ImageFile:&#34;en-us\winpe.wim&#34; /index:1 /MountDir:&#34;C:\WinPE_amd64\mount&#34;
+</span></span></code></pre></div><p>Kopieer de bestanden:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Xcopy &#34;C:\WinPE_amd64\mount\Windows\Boot\EFI\bootmgr.efi&#34; &#34;Media\bootmgr.efi&#34; /Y
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Xcopy &#34;C:\WinPE_amd64\mount\Windows\Boot\EFI\bootmgfw.efi&#34; &#34;Media\EFI\Boot\bootx64.efi&#34; /Y
+</span></span></code></pre></div><p>Maak bestand om mee te werken:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>copype amd64 C:\WinPE_amd64
+</span></span></code></pre></div><p>Maak opstartbare WinPE iso.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>MakeWinPEMedia /ISO C:\WinPE_amd64 C:\WinPE_amd64\WinPE_amd64.iso
+</span></span></code></pre></div><p>Als je geen iso ziet op deze lokatie: C:\WinPE_amd64<br>
+Dan moet je deze C:\WinPE_amd64 map even verwijderen en bovenstaand commando nogmaals uitvoeren.<br>
+Dan zul je wel een WinPE iso zien.</p>
+<h3 id="upload-winpe-bestanden">Upload WinPE bestanden<a class="anchorjs-link" href="#upload-winpe-bestanden"></a></h3><p>Nu moeten we de WinPE bestanden uploaden naar onze pxe server.<br>
+Login op je server en zorg dat de volgende mappen bestaan.<br>
+Op de lokatie van je docker container.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/assets/WinPE/x64/
+</span></span></code></pre></div><p>Als je deze mappen hebt koppel dan de WinPE iso op je windows machine.<br>
+Kopieer deze bestande naar bovenstaande lokatie.</p>
+<h3 id="maak-netwerk-share-voor-het-serveren-van-windows">Maak netwerk share voor het serveren van Windows<a class="anchorjs-link" href="#maak-netwerk-share-voor-het-serveren-van-windows"></a></h3><p>Installeer op je server samba (als dit al niet geinstalleerd is)</p>
+<p>Maak nu een map waar je windows iso in uitgepakt word.<br>
+Geef deze map ook de juiste rechten.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir /home/je_gebruikersnaam/Windows11
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod 777 /home/je_gebruikersnaam/Windows11
+</span></span></code></pre></div><p>Als je die map gemaakt hebt ga dan naar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cd /etc/samba
+</span></span></code></pre></div><p>Als je nu ls typt zie je de bestanden.<br>
+open smb.conf.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo nano smb.conf
+</span></span></code></pre></div><p>Zet het volgende in de samba configuratie:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[windows]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  comment = Windows install
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  path = /home/je_gebruikersnaam/Windows11
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  public = yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  writable = yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>  guest only = yes
+</span></span></code></pre></div><h3 id="windows-iso-kopieren">Windows iso kopieren<a class="anchorjs-link" href="#windows-iso-kopieren"></a></h3><p>Goed we hebben nu een netwerk share voor de Windows installatie.<br>
+Koppel een Windows iso op je Winodows machine.<br>
+Kopieer de inhoud van de iso naar je Windows netwerk share.</p>
+<p>Wil je meerdere windows versies serveren?<br>
+Herhaal dan de stappen.</p>
+<h3 id="configureer-netboot-voor-windows">Configureer netboot voor Windows<a class="anchorjs-link" href="#configureer-netboot-voor-windows"></a></h3><p>Ga naar http://ip-van-je-server:3000/ en open weer boot.cfg<br>
+Net als in voorgaande stappen.<br>
+Je ziet ergens een regel staan die hier op lijkt: set win_base_url<br>
+Verander die naar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>set win_base_url http://ip-van-je-server:8080/WinPE  
+</span></span></code></pre></div><p>Als het goed is zou je nu via netwerk moeten kunnen booten.<br>
+In het boot menu die via je netwerk word geladen zie je een kopje Windows.<br>
+Als je daarop klikt laad er een scherm van Wpeinit.</p>
+<h3 id="setup-starten-vanaf-netwerk">setup starten vanaf netwerk<a class="anchorjs-link" href="#setup-starten-vanaf-netwerk"></a></h3><p>Koppel je windows share aan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>net use Z: \\&lt;server-ip-address&gt;\&lt;share-name&gt;
+</span></span></code></pre></div><p>Start setup</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Z:\setup.exe
+</span></span></code></pre></div><p>Je windows installatie zou nu moeten starten.</p>
+<p>Aanvullingen of opmerkingen?<br>
+Laat een comment achter :)</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/posts/wol/" data-toggle="tooltip" data-placement="top" title="Wake on Lan">
+              Previous<br>
+              <span>Wake on Lan</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+<div class="giscus" id="comments"></div>
+<script src="https://giscus.app/client.js" 
+  data-repo="landaal-ict/comments" 
+  data-repo-id="R_kgDOKMdqRQ"
+  data-category="General"
+  data-category-id="DIC_kwDOKMdqRc4CY7GK"
+  data-mapping="pathname"
+  data-strict="0" 
+  data-reactions-enabled="1" 
+  data-emit-metadata="0" 
+  data-input-position="bottom"
+  data-theme="light_tritanopia"
+  data-lang="nl"
+  crossorigin="anonymous"
+  async>
+  </script>
+
+
+
+
+      </div>
+
+      
+      
+      
+      <div class="
+              col-lg-2 col-lg-offset-0
+              visible-lg-block
+              sidebar-container
+              catalog-container">
+        <div class="side-catalog">
+          <hr class="hidden-sm hidden-xs">
+          <h5>
+            <a class="catalog-toggle" href="#">CATALOG</a>
+          </h5>
+          <ul class="catalog-body"></ul>
+        </div>
+      </div>
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/docker/">docker</a>
+    
+    <a href="/tags/game/">Game</a>
+    
+    <a href="/tags/it/">IT</a>
+    
+    <a href="/tags/pxe/">pxe</a>
+    
+    <a href="/tags/pxeserver/">pxeserver</a>
+    
+    <a href="/tags/server/">server</a>
+    
+    <a href="/tags/site/">site</a>
+    
+    <a href="/tags/windows/">windows</a>
+    
+    <a href="/tags/wireguard/">wireguard</a>
+    
+    <a href="/tags/wol/">wol</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+<li>
+  <a href="https://github.com/landaal-ict" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://twitter.com/_landaal" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.instagram.com/wlandaal" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://facebook.com/wlandaal" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://t.me/landaalict" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-telegram-plane fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.snapchat.com/add/wessel2308" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-snapchat fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="mailto:wesley@landaalict.nl">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="/index.xml" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          Wesley Landaal 2023  
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.73a6a8d8df45293e042d15867416f603045bbeb98406731e5022d6c60388cd9d.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+  function generateCatalog(selector) {
+    _containerSelector = 'div.post-container'
+    
+    var P = $(_containerSelector), a, n, t, l, i, c;
+    a = P.find('h1,h2,h3,h4');
+    
+    $(selector).html('')
+    
+    a.each(function () {
+      n = $(this).prop('tagName').toLowerCase();
+      i = "#" + $(this).prop('id');
+      t = $(this).text();
+      c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+      l = $('<li class="' + n + '_nav"></li>').append(c);
+      $(selector).append(l);
+    });
+    return true;
+  }
+
+  generateCatalog(".catalog-body");
+
+  
+  $(".catalog-toggle").click((function (e) {
+    e.preventDefault();
+    $('.side-catalog').toggleClass("fold")
+  }))
+</script>
+
+
+<script type="text/javascript" src='/js/jquery.nav.min.ade6bde8f9fcc6a4b40852cb892e9f5912340ab8fe1305149d917fdd16fffd8d.js'></script>
+<script>
+   $(document).ready( function () {
+    $('.catalog-body').onePageNav({
+      currentClass: "active",
+      changeHash: !1,
+      easing: "swing",
+      filter: "",
+      scrollSpeed: 700,
+      scrollOffset: 0,
+      scrollThreshold: .2,
+      begin: null,
+      end: null,
+      scrollChange: null,
+      padding: 80
+    });
+  });
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0C9FCCE4K"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-Z0C9FCCE4K', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>
