@@ -31,5 +31,33 @@ Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Fla
 Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
     </item>
     
+    <item>
+      <title>Pxe server</title>
+      <link>https://landaalict.nl/posts/pxe/</link>
+      <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/posts/pxe/</guid>
+      <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.
+Dus ik heb een pxe boot server opgezet.
+Hier onder een uitleg hoe ik dat gedaan heb.
+Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
+Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
+    </item>
+    
+    <item>
+      <title>Wireguard</title>
+      <link>https://landaalict.nl/posts/wireguard/</link>
+      <pubDate>Sun, 17 Sep 2023 11:38:07 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/posts/wireguard/</guid>
+      <description>er bestaad een wireguard project on github.
+Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.
+openSUSE is een linux distro.
+maar vervolgens blijven de pr&amp;rsquo;s open staan niet alleen die van mij maar er staan er meerdere open.
+Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.
+Aangezien het vrije software is heb ik mijn versie op github gezet.
+Deze heeft dus openSUSE support.</description>
+    </item>
+    
   </channel>
 </rss>
