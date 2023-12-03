@@ -8,21 +8,21 @@
 
   
     
-  <title>AutoCatcher | Wesley Landaal</title>
+  <title>Onedrive Linux | Wesley Landaal</title>
   <meta name="author" content="Wesley Landaal">
-  <meta name="description" content="Lekker makkelijk blijven vissen in  Palia">
+  <meta name="description" content="Installeer onedrive op Debian 12">
   <meta name="keywords" content="blog,personal,bus,driver,instructor,instructeur,motor,auto">
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="AutoCatcher"/>
-<meta name="twitter:description" content="Lekker makkelijk blijven vissen in  Palia"/>
+<meta name="twitter:title" content="Onedrive Linux"/>
+<meta name="twitter:description" content="Installeer onedrive op Debian 12"/>
 
-  <meta property="og:title" content="AutoCatcher" />
-<meta property="og:description" content="Lekker makkelijk blijven vissen in  Palia" />
+  <meta property="og:title" content="Onedrive Linux" />
+<meta property="og:description" content="Installeer onedrive op Debian 12" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://landaalict.nl/posts/autocatcher/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-09-04T13:15:13+02:00" />
-<meta property="article:modified_time" content="2023-09-04T13:15:13+02:00" />
+<meta property="og:url" content="https://landaalict.nl/posts/onedrive-linux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-03T12:54:57+01:00" />
+<meta property="article:modified_time" content="2023-12-03T12:54:57+01:00" />
 
   <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
   
@@ -168,16 +168,16 @@
         <div class="post-heading">
           <div class="tags">
             
-            <a class="tag" href="/tags/it/" title="IT">IT</a>
+            <a class="tag" href="/tags/linux/" title="linux">linux</a>
             
-            <a class="tag" href="/tags/game/" title="Game">Game</a>
+            <a class="tag" href="/tags/onedrive/" title="onedrive">onedrive</a>
             
           </div>
-          <h1>AutoCatcher</h1>
-          <h2 class="subheading">automatisch vissen in palia</h2>
+          <h1>Onedrive Linux</h1>
+          <h2 class="subheading"></h2>
           <span class="meta">
             Posted by  Wesley Landaal 
-            on Mon, Sep 4, 2023
+            on Sun, Dec 3, 2023
           </span>
         </div>
       </div>
@@ -198,33 +198,47 @@
               col-lg-8 col-lg-offset-2
               col-md-10 col-md-offset-1
               post-container">
-        <p>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.<br>
-Alleen dit programma crashed om de zo veel minuten.<br>
-Dat is natuurlijk mega irritant.</p>
-<p>Ik heb er een ander programmatje voor gemaakt.<br>
-Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.<br>
-Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.</p>
-<p>Project kun je hier <a href="https://github.com/landaal-ict/palia-catcher" target="_blank">volgen</a></p>
-<p>Veel plezier er mee! :)</p>
+        <h1 id="installeer-onedrive-op-debian-12">Installeer Onedrive op Debian 12.<a class="anchorjs-link" href="#installeer-onedrive-op-debian-12"></a></h1><h4 id="zorg-dat-je-systeem-up-to-date-is">Zorg dat je systeem up-to-date is<a class="anchorjs-link" href="#zorg-dat-je-systeem-up-to-date-is"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt update &amp;&amp; sudo apt upgrade
+</span></span></code></pre></div><h4 id="voeg-de--opensuse-build-service-repository-release-key-toe">voeg de  OpenSuSE Build Service repository release key toe.<a class="anchorjs-link" href="#voeg-de--opensuse-build-service-repository-release-key-toe"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg &gt; /dev/null
+</span></span></code></pre></div><h4 id="voeg-de--opensuse-build-service-repository-toe">voeg de  OpenSuSE Build Service repository toe.<a class="anchorjs-link" href="#voeg-de--opensuse-build-service-repository-toe"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>echo &#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/ ./&#34; | sudo tee /etc/apt/sources.list.d/onedrive.list
+</span></span></code></pre></div><h4 id="update-je-apt-package-cache">Update je apt package cache.<a class="anchorjs-link" href="#update-je-apt-package-cache"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt update
+</span></span></code></pre></div><h4 id="installeer-onedrive">Installeer Onedrive<a class="anchorjs-link" href="#installeer-onedrive"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt install --no-install-recommends --no-install-suggests onedrive
+</span></span></code></pre></div><h3 id="installeer-onedrive-gui">Installeer Onedrive gui<a class="anchorjs-link" href="#installeer-onedrive-gui"></a></h3><p>Download de laatste release <a href="https://github.com/bpozdena/OneDriveGUI/releases" target="_blank">hier</a></p>
+<p>Plaats deze app image in je home map in bin map.<br>
+Als je deze map niet hebt maak hem dan aan.</p>
+<h4 id="maak-de-app-image-uitvoerbaar">maak de app image uitvoerbaar.<a class="anchorjs-link" href="#maak-de-app-image-uitvoerbaar"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cd bin/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod +x OneDriveGUI-1.0.3_fix116-x86_64.AppImage
+</span></span></code></pre></div><h4 id="laat-nu-de-onedrive-gui-auto-starten">Laat nu de Onedrive gui auto starten.<a class="anchorjs-link" href="#laat-nu-de-onedrive-gui-auto-starten"></a></h4><p>open je terminal en maak een nieuwe file aan met extentie .desktop</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>nano onedrive.desktop
+</span></span></code></pre></div><p>Zet het volgende in je file.<br>
+Zoals je ziet heb ik alles in mijn home folder in de map bin.<br>
+Gegebruik je andere lokatie ? pas dit hier onder dan aan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[Desktop Entry]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Type=Application
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Name=Onedrive
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Exec=/home/wesley/bin/OneDriveGUI-1.0.3_fix116-x86_64.AppImage
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Icon=/home/wesley/bin/OneDrive.png
+</span></span></code></pre></div><p>Maak je onedrive.desktop uitvoerbaar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod +x onedrive.desktop
+</span></span></code></pre></div><p>Zorg er voor dat je .AppImage bestand uitvoerbaar is.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod +x /home/wesley/bin/OneDriveGUI-1.0.3_fix116-x86_64.AppImage
+</span></span></code></pre></div><p>Verplaats nu je onedrive.desktop naar een andere lokatie zodat je hem in je menu ziet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mv onedrive.desktop ~/.local/share/applications/
+</span></span></code></pre></div><p>Als je nu uitlogt en weer inlogt zou je de onedrive app moeten zien in je applications menu.</p>
+<h4 id="voor-de-gnome-users">voor de gnome users.<a class="anchorjs-link" href="#voor-de-gnome-users"></a></h4><p>Open nu afstellingen en ga naar opstarttoepassingen.<br>
+zet onedrive daar neer en elke keer dat je inlogt start onedrive.</p>
 
 
         <hr style="visibility: hidden;" />
         <ul class="pager">
           
           <li class="previous">
-            <a href="/posts/nieuwesite/" data-toggle="tooltip" data-placement="top" title="Nieuwe site">
+            <a href="/posts/debian12/" data-toggle="tooltip" data-placement="top" title="Debian 12">
               Previous<br>
-              <span>Nieuwe site</span>
+              <span>Debian 12</span>
             </a>
           </li>
           
-          
-          <li class="next">
-            <a href="/posts/wireguard/" data-toggle="tooltip" data-placement="top" title="Wireguard">
-              Next<br>
-              <span>Wireguard</span>
-            </a>
-          </li>
           
         </ul>
         <hr style="visibility: hidden;" />

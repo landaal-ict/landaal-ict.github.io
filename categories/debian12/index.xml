@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Wesley Landaal</title>
-    <link>https://landaalict.nl/categories/linux/</link>
-    <description>Recent content in linux on Wesley Landaal</description>
+    <title>debian12 on Wesley Landaal</title>
+    <link>https://landaalict.nl/categories/debian12/</link>
+    <description>Recent content in debian12 on Wesley Landaal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 12:54:57 +0100</lastBuildDate><atom:link href="https://landaalict.nl/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 12:54:57 +0100</lastBuildDate><atom:link href="https://landaalict.nl/categories/debian12/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Onedrive Linux</title>
       <link>https://landaalict.nl/posts/onedrive-linux/</link>
@@ -15,20 +15,6 @@
       
       <guid>https://landaalict.nl/posts/onedrive-linux/</guid>
       <description>Installeer Onedrive op Debian 12.Zorg dat je systeem up-to-date is1sudo apt update &amp;amp;&amp;amp; sudo apt upgrade voeg de OpenSuSE Build Service repository release key toe.1wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg &amp;gt; /dev/null voeg de OpenSuSE Build Service repository toe.1echo &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/ ./&amp;#34; | sudo tee /etc/apt/sources.list.d/onedrive.list Update je apt package cache.1sudo apt update Installeer Onedrive1sudo apt install --no-install-recommends --no-install-suggests onedrive Installeer Onedrive guiDownload de laatste release hier</description>
-    </item>
-    
-    <item>
-      <title>Debian 12</title>
-      <link>https://landaalict.nl/posts/debian12/</link>
-      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
-      
-      <guid>https://landaalict.nl/posts/debian12/</guid>
-      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)
-Ik gebruik op dit moment Debian 12 Gnome.
-Ik installeer op de desktop versies van Debian altijd flatpak.
-Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.
-Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.
-Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
     </item>
     
   </channel>

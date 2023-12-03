@@ -7,20 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 12:25:21 +0100</lastBuildDate><atom:link href="https://landaalict.nl/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 12:54:57 +0100</lastBuildDate><atom:link href="https://landaalict.nl/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>desktop</title>
-      <link>https://landaalict.nl/categories/desktop/</link>
-      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      <title>debian12</title>
+      <link>https://landaalict.nl/categories/debian12/</link>
+      <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
       
-      <guid>https://landaalict.nl/categories/desktop/</guid>
+      <guid>https://landaalict.nl/categories/debian12/</guid>
       <description></description>
     </item>
     
     <item>
       <title>it</title>
       <link>https://landaalict.nl/categories/it/</link>
-      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
       
       <guid>https://landaalict.nl/categories/it/</guid>
       <description></description>
@@ -29,9 +29,18 @@
     <item>
       <title>linux</title>
       <link>https://landaalict.nl/categories/linux/</link>
-      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
       
       <guid>https://landaalict.nl/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>desktop</title>
+      <link>https://landaalict.nl/categories/desktop/</link>
+      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/categories/desktop/</guid>
       <description></description>
     </item>
     
