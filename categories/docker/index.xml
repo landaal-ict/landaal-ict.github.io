@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 15 Oct 2023 12:12:37 +0200</lastBuildDate>
-    <atom:link href="https://landaalict.nl/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 12:12:37 +0200</lastBuildDate><atom:link href="https://landaalict.nl/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/posts/docker/</link>
       <pubDate>Sun, 15 Oct 2023 12:12:37 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/docker/</guid>
       <description>Even een snelle post van mij.
 Ik help regelmatig mensen met mijn docker-compose files.
@@ -23,5 +23,6 @@ Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.
 Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.
 Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
     </item>
+    
   </channel>
 </rss>

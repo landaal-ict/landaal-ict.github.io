@@ -7,24 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 12 Nov 2023 21:35:17 +0100</lastBuildDate>
-    <atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 12:25:21 +0100</lastBuildDate><atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian12</title>
+      <link>https://landaalict.nl/posts/debian12/</link>
+      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/posts/debian12/</guid>
+      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)
+Ik gebruik op dit moment Debian 12 Gnome.
+Ik installeer op de desktop versies van Debian altijd flatpak.
+Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.
+Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.
+Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
+    </item>
+    
     <item>
       <title>Pxe server</title>
       <link>https://landaalict.nl/posts/pxe/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
+      
       <guid>https://landaalict.nl/posts/pxe/</guid>
       <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.
 Dus ik heb een pxe boot server opgezet.
 Hier onder een uitleg hoe ik dat gedaan heb.
 Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
-Mijn docker compose file kun je hier vinden
 Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
     </item>
+    
     <item>
       <title>Wake on Lan</title>
       <link>https://landaalict.nl/posts/wol/</link>
       <pubDate>Sun, 15 Oct 2023 12:36:00 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/wol/</guid>
       <description>Setup wake on lan Linuxik ga er vanuit dat je wake on lan in de bios al hebt aan staan.
 enp4s0 is mijn interface dit kan op jou machine anders zijn.
@@ -33,10 +48,12 @@ Check in linux of je server Wake on lan al heeft aan staan.
 Beijk de naam van je interface.
 1ip a De eerste is je loopback interface en de tweede moet je hebben.</description>
     </item>
+    
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/posts/docker/</link>
       <pubDate>Sun, 15 Oct 2023 12:12:37 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/docker/</guid>
       <description>Even een snelle post van mij.
 Ik help regelmatig mensen met mijn docker-compose files.
@@ -47,10 +64,12 @@ Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.
 Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.
 Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
     </item>
+    
     <item>
       <title>WSL Windows Server</title>
       <link>https://landaalict.nl/posts/wsl-windows-server/</link>
       <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/wsl-windows-server/</guid>
       <description>Installeer WSL op windows Server 20221wsl --install Voor als hij wsl 1 installeerd.
 1dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart Maakt wsl2 standaard.
@@ -59,10 +78,12 @@ Ik probeer ook container / app specifieke info op de git repo bij te houden.</de
 verander de naam debian hier onder naar jou disto.
 1wsl --set-version debian 2 Als je maar een linux distro hebt geinstalleerd kun je die starten</description>
     </item>
+    
     <item>
       <title>Wireguard</title>
       <link>https://landaalict.nl/posts/wireguard/</link>
       <pubDate>Sun, 17 Sep 2023 11:38:07 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/wireguard/</guid>
       <description>er bestaad een wireguard project on github.
 Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.
@@ -72,10 +93,12 @@ Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.
 Aangezien het vrije software is heb ik mijn versie op github gezet.
 Deze heeft dus openSUSE support.</description>
     </item>
+    
     <item>
       <title>AutoCatcher</title>
       <link>https://landaalict.nl/posts/autocatcher/</link>
       <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/autocatcher/</guid>
       <description>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.
 Alleen dit programma crashed om de zo veel minuten.
@@ -85,10 +108,12 @@ Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.
 Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.
 Project kun je hier volgen</description>
     </item>
+    
     <item>
       <title>Nieuwe site</title>
       <link>https://landaalict.nl/posts/nieuwesite/</link>
       <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/nieuwesite/</guid>
       <description>Heb mijn website weer eens op de schop gedaan.
 Dit heb ik gedaan omdat ik mijn vorige website niet leuk meer vond.
@@ -97,5 +122,6 @@ Zal zo nu en dan dingen op mijn website plaatsen.
 disclaimer: rare comments worden zonder pardon verwijderd.
 Fijne dag! :)</description>
     </item>
+    
   </channel>
 </rss>

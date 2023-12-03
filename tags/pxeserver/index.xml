@@ -7,19 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 12 Nov 2023 21:35:17 +0100</lastBuildDate>
-    <atom:link href="https://landaalict.nl/tags/pxeserver/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2023 21:35:17 +0100</lastBuildDate><atom:link href="https://landaalict.nl/tags/pxeserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pxe server</title>
       <link>https://landaalict.nl/posts/pxe/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
+      
       <guid>https://landaalict.nl/posts/pxe/</guid>
       <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.
 Dus ik heb een pxe boot server opgezet.
 Hier onder een uitleg hoe ik dat gedaan heb.
 Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
-Mijn docker compose file kun je hier vinden
 Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
     </item>
+    
   </channel>
 </rss>

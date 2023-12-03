@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 17 Sep 2023 11:38:07 +0200</lastBuildDate>
-    <atom:link href="https://landaalict.nl/tags/wireguard/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 11:38:07 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/wireguard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireguard</title>
       <link>https://landaalict.nl/posts/wireguard/</link>
       <pubDate>Sun, 17 Sep 2023 11:38:07 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/wireguard/</guid>
       <description>er bestaad een wireguard project on github.
 Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.
@@ -22,5 +22,6 @@ Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.
 Aangezien het vrije software is heb ik mijn versie op github gezet.
 Deze heeft dus openSUSE support.</description>
     </item>
+    
   </channel>
 </rss>

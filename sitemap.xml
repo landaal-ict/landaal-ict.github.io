@@ -3,18 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://landaalict.nl/</loc>
-    <lastmod>2023-11-12T21:35:17+01:00</lastmod>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/</loc>
-    <lastmod>2023-11-12T21:35:17+01:00</lastmod>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
   </url><url>
-    <loc>https://landaalict.nl/categories/computers/</loc>
-    <lastmod>2023-11-12T21:35:17+01:00</lastmod>
+    <loc>https://landaalict.nl/tags/debian/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/tags/debian12/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/posts/debian12/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/categories/desktop/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/categories/it/</loc>
-    <lastmod>2023-11-12T21:35:17+01:00</lastmod>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/categories/linux/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/posts/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/tags/</loc>
+    <lastmod>2023-12-03T12:25:21+01:00</lastmod>
+  </url><url>
+    <loc>https://landaalict.nl/categories/computers/</loc>
     <lastmod>2023-11-12T21:35:17+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/tags/pxe/</loc>
@@ -24,9 +42,6 @@
     <lastmod>2023-11-12T21:35:17+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/tags/pxeserver/</loc>
-    <lastmod>2023-11-12T21:35:17+01:00</lastmod>
-  </url><url>
-    <loc>https://landaalict.nl/tags/</loc>
     <lastmod>2023-11-12T21:35:17+01:00</lastmod>
   </url><url>
     <loc>https://landaalict.nl/tags/server/</loc>

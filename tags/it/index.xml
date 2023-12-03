@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 13:15:13 +0200</lastBuildDate>
-    <atom:link href="https://landaalict.nl/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 13:15:13 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/it/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AutoCatcher</title>
       <link>https://landaalict.nl/posts/autocatcher/</link>
       <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
+      
       <guid>https://landaalict.nl/posts/autocatcher/</guid>
       <description>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.
 Alleen dit programma crashed om de zo veel minuten.
@@ -22,5 +22,6 @@ Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.
 Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.
 Project kun je hier volgen</description>
     </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debian12 on Wesley Landaal</title>
+    <link>https://landaalict.nl/tags/debian12/</link>
+    <description>Recent content in debian12 on Wesley Landaal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-nl</language>
+    <copyright>Wesley Landaal 2023</copyright>
+    <lastBuildDate>Sun, 03 Dec 2023 12:25:21 +0100</lastBuildDate><atom:link href="https://landaalict.nl/tags/debian12/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian12</title>
+      <link>https://landaalict.nl/posts/debian12/</link>
+      <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
+      
+      <guid>https://landaalict.nl/posts/debian12/</guid>
+      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)
+Ik gebruik op dit moment Debian 12 Gnome.
+Ik installeer op de desktop versies van Debian altijd flatpak.
+Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.
+Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.
+Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
+    </item>
+    
+  </channel>
+</rss>
