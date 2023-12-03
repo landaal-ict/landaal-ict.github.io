@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Update on Wesley Landaal</title>
+    <link>https://landaalict.nl/tags/update/</link>
+    <description>Recent content in Update on Wesley Landaal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-nl</language>
+    <copyright>Wesley Landaal 2023</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 21:27:29 +0200</lastBuildDate><atom:link href="https://landaalict.nl/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nieuwe site</title>
+      <link>https://landaalict.nl/posts/nieuwesite/</link>
+      <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/posts/nieuwesite/</guid>
+      <description>Heb mijn website weer eens op de schop gedaan.
+Dit heb ik gedaan omdat ik mijn vorige website niet leuk meer vond.
+Vandaar nu wat nieuws gemaakt, je kan nu ook comments achter laten :)
+Zal zo nu en dan dingen op mijn website plaatsen.
+disclaimer: rare comments worden zonder pardon verwijderd.
+Fijne dag! :)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>windows on Wesley Landaal</title>
+    <title>Windows on Wesley Landaal</title>
     <link>https://landaalict.nl/tags/windows/</link>
-    <description>Recent content in windows on Wesley Landaal</description>
+    <description>Recent content in Windows on Wesley Landaal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
@@ -20,6 +20,21 @@
 1wsl --list --verbose Als je nog wsl1 versies heb kun je ze omzetten naar wsl2.
 verander de naam debian hier onder naar jou disto.
 1wsl --set-version debian 2 Als je maar een linux distro hebt geinstalleerd kun je die starten</description>
+    </item>
+    
+    <item>
+      <title>AutoCatcher</title>
+      <link>https://landaalict.nl/posts/autocatcher/</link>
+      <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
+      
+      <guid>https://landaalict.nl/posts/autocatcher/</guid>
+      <description>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.
+Alleen dit programma crashed om de zo veel minuten.
+Dat is natuurlijk mega irritant.
+Ik heb er een ander programmatje voor gemaakt.
+Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.
+Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.
+Project kun je hier volgen</description>
     </item>
     
   </channel>
