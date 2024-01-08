@@ -7,130 +7,77 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 12:54:57 +0100</lastBuildDate><atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jan 2024 21:34:50 +0100</lastBuildDate>
+    <atom:link href="https://landaalict.nl/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nextcloud Docker</title>
+      <link>https://landaalict.nl/posts/nextcloud/</link>
+      <pubDate>Mon, 08 Jan 2024 21:34:50 +0100</pubDate>
+      <guid>https://landaalict.nl/posts/nextcloud/</guid>
+      <description>Setup Nextcloud via DockerHier onder een composefile die je kunt gebruiken om Nextcloud via docker te draaien.&#xA;Maak een docker netwerk aan.&#xA;1sudo docker network create cloud Gebruik een .env file om je wachtwoorden niet in je compose file te bewaren.&#xA;1--- 2version: &amp;#39;3&amp;#39; 3 4services: 5 nextcloud: 6 image: nextcloud 7 container_name: nextcloud 8 restart: unless-stopped 9 networks: 10 - cloud 11 depends_on: 12 - nextclouddb 13 - redis 14 ports: 15 - 8081:80 16 volumes: 17 - .</description>
+    </item>
     <item>
       <title>Onedrive Linux</title>
       <link>https://landaalict.nl/posts/onedrive-linux/</link>
       <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
-      
       <guid>https://landaalict.nl/posts/onedrive-linux/</guid>
       <description>Installeer Onedrive op Debian 12.Zorg dat je systeem up-to-date is1sudo apt update &amp;amp;&amp;amp; sudo apt upgrade voeg de OpenSuSE Build Service repository release key toe.1wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg &amp;gt; /dev/null voeg de OpenSuSE Build Service repository toe.1echo &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_12/ ./&amp;#34; | sudo tee /etc/apt/sources.list.d/onedrive.list Update je apt package cache.1sudo apt update Installeer Onedrive1sudo apt install --no-install-recommends --no-install-suggests onedrive Installeer Onedrive guiDownload de laatste release hier</description>
     </item>
-    
     <item>
       <title>Debian 12</title>
       <link>https://landaalict.nl/posts/debian12/</link>
       <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
-      
       <guid>https://landaalict.nl/posts/debian12/</guid>
-      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)
-Ik gebruik op dit moment Debian 12 Gnome.
-Ik installeer op de desktop versies van Debian altijd flatpak.
-Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.
-Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.
-Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
+      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)&#xA;Ik gebruik op dit moment Debian 12 Gnome.&#xA;Ik installeer op de desktop versies van Debian altijd flatpak.&#xA;Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.&#xA;Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.&#xA;Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
     </item>
-    
     <item>
       <title>Pxe server</title>
       <link>https://landaalict.nl/posts/pxe/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
-      
       <guid>https://landaalict.nl/posts/pxe/</guid>
-      <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.
-Dus ik heb een pxe boot server opgezet.
-Hier onder een uitleg hoe ik dat gedaan heb.
-Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
-Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
+      <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.&#xA;Dus ik heb een pxe boot server opgezet.&#xA;Hier onder een uitleg hoe ik dat gedaan heb.&#xA;Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.&#xA;Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
     </item>
-    
     <item>
       <title>Wake on Lan</title>
       <link>https://landaalict.nl/posts/wol/</link>
       <pubDate>Sun, 15 Oct 2023 12:36:00 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/wol/</guid>
-      <description>Setup wake on lan Linuxik ga er vanuit dat je wake on lan in de bios al hebt aan staan.
-enp4s0 is mijn interface dit kan op jou machine anders zijn.
-Dus in alle commandos enp4s0 aanpassen naar de naam van jou interface.
-Check in linux of je server Wake on lan al heeft aan staan.
-Beijk de naam van je interface.
-1ip a De eerste is je loopback interface en de tweede moet je hebben.</description>
+      <description>Setup wake on lan Linuxik ga er vanuit dat je wake on lan in de bios al hebt aan staan.&#xA;enp4s0 is mijn interface dit kan op jou machine anders zijn.&#xA;Dus in alle commandos enp4s0 aanpassen naar de naam van jou interface.&#xA;Check in linux of je server Wake on lan al heeft aan staan.&#xA;Beijk de naam van je interface.&#xA;1ip a De eerste is je loopback interface en de tweede moet je hebben.</description>
     </item>
-    
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/posts/docker/</link>
       <pubDate>Sun, 15 Oct 2023 12:12:37 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/docker/</guid>
-      <description>Even een snelle post van mij.
-Ik help regelmatig mensen met mijn docker-compose files.
-Daarom heb ik nu een repo gemaakt op github.
-Volg het project hier
-De compose files moet je wel even eigen maken.
-Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.
-Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.
-Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
+      <description>Even een snelle post van mij.&#xA;Ik help regelmatig mensen met mijn docker-compose files.&#xA;Daarom heb ik nu een repo gemaakt op github.&#xA;Volg het project hier&#xA;De compose files moet je wel even eigen maken.&#xA;Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.&#xA;Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.&#xA;Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
     </item>
-    
     <item>
       <title>WSL Windows Server</title>
       <link>https://landaalict.nl/posts/wsl-windows-server/</link>
       <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/wsl-windows-server/</guid>
-      <description>Installeer WSL op windows Server 20221wsl --install Voor als hij wsl 1 installeerd.
-1dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart Maakt wsl2 standaard.
-1wsl --set-default-version 2 bekijk of je geinstalleerde linux distro(s) wsl 1 of 2 zijn.
-1wsl --list --verbose Als je nog wsl1 versies heb kun je ze omzetten naar wsl2.
-verander de naam debian hier onder naar jou disto.
-1wsl --set-version debian 2 Als je maar een linux distro hebt geinstalleerd kun je die starten</description>
+      <description>Installeer WSL op windows Server 20221wsl --install Voor als hij wsl 1 installeerd.&#xA;1dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart Maakt wsl2 standaard.&#xA;1wsl --set-default-version 2 bekijk of je geinstalleerde linux distro(s) wsl 1 of 2 zijn.&#xA;1wsl --list --verbose Als je nog wsl1 versies heb kun je ze omzetten naar wsl2.&#xA;verander de naam debian hier onder naar jou disto.&#xA;1wsl --set-version debian 2 Als je maar een linux distro hebt geinstalleerd kun je die starten</description>
     </item>
-    
     <item>
       <title>Wireguard</title>
       <link>https://landaalict.nl/posts/wireguard/</link>
       <pubDate>Sun, 17 Sep 2023 11:38:07 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/wireguard/</guid>
-      <description>er bestaad een wireguard project on github.
-Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.
-openSUSE is een linux distro.
-maar vervolgens blijven de pr&amp;rsquo;s open staan niet alleen die van mij maar er staan er meerdere open.
-Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.
-Aangezien het vrije software is heb ik mijn versie op github gezet.
-Deze heeft dus openSUSE support.</description>
+      <description>er bestaad een wireguard project on github.&#xA;Ik had er openSUSE support aan toegevoegd omdat er vraag naar was.&#xA;openSUSE is een linux distro.&#xA;maar vervolgens blijven de pr&amp;rsquo;s open staan niet alleen die van mij maar er staan er meerdere open.&#xA;Waarschijnlijk doet de gene die het project begonnen is er niet veel meer aan.&#xA;Aangezien het vrije software is heb ik mijn versie op github gezet.&#xA;Deze heeft dus openSUSE support.</description>
     </item>
-    
     <item>
       <title>AutoCatcher</title>
       <link>https://landaalict.nl/posts/autocatcher/</link>
       <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/autocatcher/</guid>
-      <description>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.
-Alleen dit programma crashed om de zo veel minuten.
-Dat is natuurlijk mega irritant.
-Ik heb er een ander programmatje voor gemaakt.
-Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.
-Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.
-Project kun je hier volgen</description>
+      <description>Je kunt in Palia (een game) blijven vissen met een speciaal progamma om zo geld te verdienen.&#xA;Alleen dit programma crashed om de zo veel minuten.&#xA;Dat is natuurlijk mega irritant.&#xA;Ik heb er een ander programmatje voor gemaakt.&#xA;Deze overruled dat programmatje en zorgt dat het gewoon blijft werken.&#xA;Ook heb ik er een afsluit timer in gemaakt zo kun je kiezen over hoeveel uur je pc afsluit.&#xA;Project kun je hier volgen</description>
     </item>
-    
     <item>
       <title>Nieuwe site</title>
       <link>https://landaalict.nl/posts/nieuwesite/</link>
       <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/nieuwesite/</guid>
-      <description>Heb mijn website weer eens op de schop gedaan.
-Dit heb ik gedaan omdat ik mijn vorige website niet leuk meer vond.
-Vandaar nu wat nieuws gemaakt, je kan nu ook comments achter laten :)
-Zal zo nu en dan dingen op mijn website plaatsen.
-disclaimer: rare comments worden zonder pardon verwijderd.
-Fijne dag! :)</description>
+      <description>Heb mijn website weer eens op de schop gedaan.&#xA;Dit heb ik gedaan omdat ik mijn vorige website niet leuk meer vond.&#xA;Vandaar nu wat nieuws gemaakt, je kan nu ook comments achter laten :)&#xA;Zal zo nu en dan dingen op mijn website plaatsen.&#xA;disclaimer: rare comments worden zonder pardon verwijderd.&#xA;Fijne dag! :)</description>
     </item>
-    
   </channel>
 </rss>

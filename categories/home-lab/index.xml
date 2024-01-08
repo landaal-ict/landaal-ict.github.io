@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IT on Wesley Landaal</title>
-    <link>https://landaalict.nl/tags/it/</link>
-    <description>Recent content in IT on Wesley Landaal</description>
+    <title>Home-Lab on Wesley Landaal</title>
+    <link>https://landaalict.nl/categories/home-lab/</link>
+    <description>Recent content in Home-Lab on Wesley Landaal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
     <lastBuildDate>Mon, 08 Jan 2024 21:34:50 +0100</lastBuildDate>
-    <atom:link href="https://landaalict.nl/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://landaalict.nl/categories/home-lab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nextcloud Docker</title>
       <link>https://landaalict.nl/posts/nextcloud/</link>

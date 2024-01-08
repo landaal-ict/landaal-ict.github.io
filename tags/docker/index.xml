@@ -7,35 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 12 Nov 2023 21:35:17 +0100</lastBuildDate><atom:link href="https://landaalict.nl/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2023 21:35:17 +0100</lastBuildDate>
+    <atom:link href="https://landaalict.nl/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pxe server</title>
       <link>https://landaalict.nl/posts/pxe/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
-      
       <guid>https://landaalict.nl/posts/pxe/</guid>
-      <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.
-Dus ik heb een pxe boot server opgezet.
-Hier onder een uitleg hoe ik dat gedaan heb.
-Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.
-Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
+      <description>PXE Boot ServerWas er klaar mee met elke keer een usb stick maken voor een installatie.&#xA;Dus ik heb een pxe boot server opgezet.&#xA;Hier onder een uitleg hoe ik dat gedaan heb.&#xA;Je kunt er je voordeel mee doen of dingen uit mijn config gebruiken.&#xA;Vereisten Linux server Docker &amp;amp; Docker compose Je server moet een static ip hebben dhcp-server met pxe opties (en toegang tot je dhcp natuurlijk) InstallerenMaak een map aan op je server voor de installatie.</description>
     </item>
-    
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/posts/docker/</link>
       <pubDate>Sun, 15 Oct 2023 12:12:37 +0200</pubDate>
-      
       <guid>https://landaalict.nl/posts/docker/</guid>
-      <description>Even een snelle post van mij.
-Ik help regelmatig mensen met mijn docker-compose files.
-Daarom heb ik nu een repo gemaakt op github.
-Volg het project hier
-De compose files moet je wel even eigen maken.
-Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.
-Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.
-Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
+      <description>Even een snelle post van mij.&#xA;Ik help regelmatig mensen met mijn docker-compose files.&#xA;Daarom heb ik nu een repo gemaakt op github.&#xA;Volg het project hier&#xA;De compose files moet je wel even eigen maken.&#xA;Ik werk ik mijn compose files met variabele om makkelijk mijn configs te delen.&#xA;Ook staan op deze manier geen wachtwoorden of settings in de composefile zelf.&#xA;Ik probeer ook container / app specifieke info op de git repo bij te houden.</description>
     </item>
-    
   </channel>
 </rss>

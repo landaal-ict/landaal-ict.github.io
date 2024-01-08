@@ -7,20 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 12:25:21 +0100</lastBuildDate><atom:link href="https://landaalict.nl/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2023 12:25:21 +0100</lastBuildDate>
+    <atom:link href="https://landaalict.nl/tags/debian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debian 12</title>
       <link>https://landaalict.nl/posts/debian12/</link>
       <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
-      
       <guid>https://landaalict.nl/posts/debian12/</guid>
-      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)
-Ik gebruik op dit moment Debian 12 Gnome.
-Ik installeer op de desktop versies van Debian altijd flatpak.
-Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.
-Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.
-Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
+      <description>Na installatie van Debian 12Dit is wat ik doe na een installatie van Debian 12 (Desktop versie)&#xA;Ik gebruik op dit moment Debian 12 Gnome.&#xA;Ik installeer op de desktop versies van Debian altijd flatpak.&#xA;Debian is niet voor niets heel stabiel, Dit komt omdat sommige software gewoon wat ouder is.&#xA;Als ik bijvoorbeeld de nieuwste Firefox wil hebben dan installeer ik die via Flatpack.&#xA;Hier onder de standaard dingen die ik doe na een nieuwe installatie :)</description>
     </item>
-    
   </channel>
 </rss>

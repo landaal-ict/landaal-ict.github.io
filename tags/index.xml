@@ -7,114 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-nl</language>
     <copyright>Wesley Landaal 2023</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 12:54:57 +0100</lastBuildDate><atom:link href="https://landaalict.nl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jan 2024 21:34:50 +0100</lastBuildDate>
+    <atom:link href="https://landaalict.nl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IT</title>
+      <link>https://landaalict.nl/tags/it/</link>
+      <pubDate>Mon, 08 Jan 2024 21:34:50 +0100</pubDate>
+      <guid>https://landaalict.nl/tags/it/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://landaalict.nl/tags/linux/</link>
+      <pubDate>Mon, 08 Jan 2024 21:34:50 +0100</pubDate>
+      <guid>https://landaalict.nl/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Servers</title>
+      <link>https://landaalict.nl/tags/servers/</link>
+      <pubDate>Mon, 08 Jan 2024 21:34:50 +0100</pubDate>
+      <guid>https://landaalict.nl/tags/servers/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Desktop</title>
       <link>https://landaalict.nl/tags/desktop/</link>
       <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
-      
       <guid>https://landaalict.nl/tags/desktop/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://landaalict.nl/tags/linux/</link>
-      <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
-      
-      <guid>https://landaalict.nl/tags/linux/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Onedrive</title>
       <link>https://landaalict.nl/tags/onedrive/</link>
       <pubDate>Sun, 03 Dec 2023 12:54:57 +0100</pubDate>
-      
       <guid>https://landaalict.nl/tags/onedrive/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Debian</title>
       <link>https://landaalict.nl/tags/debian/</link>
       <pubDate>Sun, 03 Dec 2023 12:25:21 +0100</pubDate>
-      
       <guid>https://landaalict.nl/tags/debian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Docker</title>
       <link>https://landaalict.nl/tags/docker/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
-      
       <guid>https://landaalict.nl/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pxe</title>
       <link>https://landaalict.nl/tags/pxe/</link>
       <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
-      
       <guid>https://landaalict.nl/tags/pxe/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Servers</title>
-      <link>https://landaalict.nl/tags/servers/</link>
-      <pubDate>Sun, 12 Nov 2023 21:35:17 +0100</pubDate>
-      
-      <guid>https://landaalict.nl/tags/servers/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Wol</title>
       <link>https://landaalict.nl/tags/wol/</link>
       <pubDate>Sun, 15 Oct 2023 12:36:00 +0200</pubDate>
-      
       <guid>https://landaalict.nl/tags/wol/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Windows</title>
       <link>https://landaalict.nl/tags/windows/</link>
       <pubDate>Sun, 17 Sep 2023 21:10:42 +0200</pubDate>
-      
       <guid>https://landaalict.nl/tags/windows/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Wireguard</title>
       <link>https://landaalict.nl/tags/wireguard/</link>
       <pubDate>Sun, 17 Sep 2023 11:38:07 +0200</pubDate>
-      
       <guid>https://landaalict.nl/tags/wireguard/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Games</title>
       <link>https://landaalict.nl/tags/games/</link>
       <pubDate>Mon, 04 Sep 2023 13:15:13 +0200</pubDate>
-      
       <guid>https://landaalict.nl/tags/games/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Update</title>
       <link>https://landaalict.nl/tags/update/</link>
       <pubDate>Fri, 01 Sep 2023 21:27:29 +0200</pubDate>
-      
       <guid>https://landaalict.nl/tags/update/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
